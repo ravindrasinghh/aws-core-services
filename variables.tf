@@ -77,7 +77,7 @@ variable "tags" {
 }
 
 variable "comment" {
-  default = "Managed by terrablocks"
+  default = "Managed by ravindrasingh"
 }
 
 variable "price_class" {
