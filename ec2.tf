@@ -1,7 +1,7 @@
 resource "aws_instance" "ec2" {
   ami                    = "${var.ami}"
   instance_type          = "${var.instance_type}"
-  key_name               = "${aws_key_pair.mykey.key_name}"
+  key_name               = aws_key_pair.demo_key_1.key_name
   vpc_security_group_ids = ["${aws_security_group.ec2_sg.id}"]
   iam_instance_profile   = "${aws_iam_instance_profile.ec2_iam_profile.name}"
   user_data              = "${file("userdata/userdata.sh")}"
