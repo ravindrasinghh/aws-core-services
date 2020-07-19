@@ -20,6 +20,3 @@ resource "local_file" "local_ssh_public_key" {
   file_permission = "0400"
 }
 
-resource "aws_instance" "web" {
-  key_name               = aws_key_pair.demo_key_1.key_name
-}
